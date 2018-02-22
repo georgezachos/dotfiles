@@ -4,9 +4,6 @@
 [submodule "vim/pack/packages/start/asyncrun"]
 	path = vim/pack/packages/start/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim
-[submodule "vim/pack/packages/start/lightline"]
-	path = vim/pack/packages/start/lightline
-	url = https://github.com/itchyny/lightline.vim
 [submodule "vim/pack/packages/start/nerdtree"]
 	path = vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -76,3 +73,9 @@
 [submodule "vim/pack/packages/start/vim-zenroom2"]
 	path = vim/pack/packages/start/vim-zenroom2
 	url = https://github.com/amix/vim-zenroom2
+[submodule "vim/pack/packages/start/gruvbox"]
+	path = vim/pack/packages/start/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/pack/packages/start/peaksea"]
+	path = vim/pack/packages/start/peaksea
+	url = https://github.com/vim-scripts/peaksea.git
