@@ -21,6 +21,8 @@ au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
+au FileType python nnoremap <buffer> <leader>r :AsyncRun python3 %<CR>
+
 
 """"""""""""""""""""""""""""""
 " => Shell section
@@ -32,3 +34,17 @@ if exists('$TMUX')
         set term=screen-256color 
     endif
 endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-faust
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType faust nnoremap <buffer> <leader>cf :!faust2svg %:p<CR>
+autocmd FileType faust nnoremap <buffer> <leader>cs :!faust2supercollider %:p<CR>
+autocmd FileType faust nnoremap <buffer> <leader>cq :!faust2jaqt %:p<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-faust
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au FileType markdown nnoremap <buffer> <leader>cp :Pandoc pdf <CR>

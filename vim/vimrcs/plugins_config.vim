@@ -99,7 +99,7 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 "       \ }
 
 let g:lightline = {
-            \ 'colorscheme': 'wombat',
+            \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -146,13 +146,6 @@ let g:sclangDispatcher  = "~/.vim_runtime/sources_non_forked/scvim/bin/sc_dispat
 let g:scFlash = 1
 let g:sclangTerm = "open -a iTerm.app"
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-faust
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType faust nnoremap <buffer> <leader>cf :!faust2svg %:p<CR>
-autocmd FileType faust nnoremap <buffer> <leader>cs :!faust2supercollider %:p<CR>
-autocmd FileType faust nnoremap <buffer> <leader>cq :!faust2jaqt %:p<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -76,3 +76,12 @@
 [submodule "vim/pack/packages/start/mru.vim"]
 	path = vim/pack/packages/start/mru.vim
 	url = https://github.com/vim-scripts/mru.vim
+[submodule "vim/pack/packages/start/vim-pandoc-syntax"]
+	path = vim/pack/packages/start/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax
+[submodule "vim/pack/packages/start/vim-table-mode"]
+	path = vim/pack/packages/start/vim-table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git
+[submodule "vim/pack/packages/start/vim-pandoc"]
+	path = vim/pack/packages/start/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc
