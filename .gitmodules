@@ -28,18 +28,12 @@
 [submodule "vim/pack/packages/start/ctrlp.vim"]
 	path = vim/pack/packages/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "vim/pack/packages/start/mayansmoke"]
-	path = vim/pack/packages/start/mayansmoke
-	url = https://github.com/vim-scripts/mayansmoke
 [submodule "vim/pack/packages/start/tabular"]
 	path = vim/pack/packages/start/tabular
 	url = git://github.com/godlygeek/tabular.git
 [submodule "vim/pack/packages/start/vim-abolish"]
 	path = vim/pack/packages/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
-[submodule "vim/pack/packages/start/vim-colors-solarized"]
-	path = vim/pack/packages/start/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized
 [submodule "vim/pack/packages/start/vim-commentary"]
 	path = vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
@@ -76,6 +70,9 @@
 [submodule "vim/pack/packages/start/gruvbox"]
 	path = vim/pack/packages/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
-[submodule "vim/pack/packages/start/peaksea"]
-	path = vim/pack/packages/start/peaksea
-	url = https://github.com/vim-scripts/peaksea.git
+[submodule "vim/pack/packages/start/lightline.vim"]
+	path = vim/pack/packages/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "vim/pack/packages/start/mru.vim"]
+	path = vim/pack/packages/start/mru.vim
+	url = https://github.com/vim-scripts/mru.vim
