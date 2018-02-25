@@ -31,7 +31,7 @@ set guioptions-=L
 " set background=dark
 " let g:gruvbox_italic=1
 colorscheme gruvbox
-
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
