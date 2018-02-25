@@ -22,9 +22,6 @@
 [submodule "vim/pack/packages/start/bufexplorer"]
 	path = vim/pack/packages/start/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer
-[submodule "vim/pack/packages/start/ale"]
-	path = vim/pack/packages/start/ale
-	url = https://github.com/w0rp/ale
 [submodule "vim/pack/packages/start/ctrlp.vim"]
 	path = vim/pack/packages/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
@@ -85,3 +82,6 @@
 [submodule "vim/pack/packages/start/vim-pandoc"]
 	path = vim/pack/packages/start/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc
+[submodule "vim/pack/packages/start/python-mode"]
+	path = vim/pack/packages/start/python-mode
+	url = https://github.com/python-mode/python-mode
