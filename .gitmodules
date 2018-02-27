@@ -1,9 +1,6 @@
 [submodule "vim/pack/packages/start/vim-autoformat"]
 	path = vim/pack/packages/start/vim-autoformat
 	url = https://github.com/chiel92/vim-autoformat
-[submodule "vim/pack/packages/start/asyncrun"]
-	path = vim/pack/packages/start/asyncrun
-	url = https://github.com/skywind3000/asyncrun.vim
 [submodule "vim/pack/packages/start/nerdtree"]
 	path = vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -88,3 +85,6 @@
 [submodule "vim/pack/packages/start/scvim"]
 	path = vim/pack/packages/start/scvim
 	url = https://github.com/sbl/scvim
+[submodule "vim/pack/packages/start/vim-tmux-navigator"]
+	path = vim/pack/packages/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
