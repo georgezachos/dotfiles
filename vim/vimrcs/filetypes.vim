@@ -9,29 +9,29 @@ au FileType python syn keyword pythonDecorator True None False self
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>
 
-au FileType python inoremap <buffer> $r return 
-au FileType python inoremap <buffer> $i import 
-au FileType python inoremap <buffer> $p print 
+au FileType python inoremap <buffer> $r return
+au FileType python inoremap <buffer> $i import
+au FileType python inoremap <buffer> $p print
 au FileType python inoremap <buffer> $f # --- <esc>a
-au FileType python map <buffer> <leader>1 /class 
-au FileType python map <buffer> <leader>2 /def 
-au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
+au FileType python map <buffer> <leader>1 /class
+au FileType python map <buffer> <leader>2 /def
+au FileType python map <buffer> <leader>C ?class
+au FileType python map <buffer> <leader>D ?def
 au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
-au FileType python nnoremap <buffer> <leader>r :AsyncRun python3 %<CR>
+" au FileType python nnoremap <buffer> <leader>r :AsyncRun! python3 %<CR>
 
 
 """"""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""
-if exists('$TMUX') 
+if exists('$TMUX')
     if has('nvim')
         set termguicolors
     else
-        set term=screen-256color 
+        set term=screen-256color
     endif
 endif
 
@@ -45,6 +45,21 @@ autocmd FileType faust nnoremap <buffer> <leader>cq :!faust2jaqt %:p<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-faust
+" => pandoc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au FileType markdown nnoremap <buffer> <leader>cp :Pandoc pdf <CR>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => scvim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au Filetype supercollider nnoremap <buffer> <localleader>r :call SClang_block()<CR>
+au Filetype supercollider inoremap <buffer> <localleader>r :call SClang_block()<CR>a
+au Filetype supercollider vnoremap <buffer> <localleader>r :call SClang_send()<CR>
+
+au Filetype supercollider vnoremap <buffer> <localleader>e :call SClang_send()<CR>
+au Filetype supercollider nnoremap <buffer> <localleader>e :call SClang_send()<CR>
+au Filetype supercollider inoremap <buffer> <localleader>e :call SClang_send()<CR>a
+
+au Filetype supercollider nnoremap <buffer> <localleader>. :call SClangHardstop()<CR>

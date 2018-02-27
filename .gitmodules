@@ -7,12 +7,6 @@
 [submodule "vim/pack/packages/start/nerdtree"]
 	path = vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/pack/packages/start/scvim"]
-	path = vim/pack/packages/start/scvim
-	url = https://github.com/sbl/scvim
-[submodule "vim/pack/packages/start/vim-tidal"]
-	path = vim/pack/packages/start/vim-tidal
-	url = https://github.com/munshkr/vim-tidal
 [submodule "vim/pack/packages/start/vim-faust"]
 	path = vim/pack/packages/start/vim-faust
 	url = https://github.com/gmoe/vim-faust
@@ -25,27 +19,18 @@
 [submodule "vim/pack/packages/start/ctrlp.vim"]
 	path = vim/pack/packages/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "vim/pack/packages/start/tabular"]
-	path = vim/pack/packages/start/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule "vim/pack/packages/start/vim-abolish"]
 	path = vim/pack/packages/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "vim/pack/packages/start/vim-commentary"]
 	path = vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary
-[submodule "vim/pack/packages/start/vim-expand-region"]
-	path = vim/pack/packages/start/vim-expand-region
-	url = https://github.com/terryma/vim-expand-region
 [submodule "vim/pack/packages/start/vim-fugitive"]
 	path = vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
 [submodule "vim/pack/packages/start/vim-gitgutter"]
 	path = vim/pack/packages/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/pack/packages/start/vim-indent-object"]
-	path = vim/pack/packages/start/vim-indent-object
-	url = https://github.com/michaeljsmith/vim-indent-object
 [submodule "vim/pack/packages/start/vim-markdown"]
 	path = vim/pack/packages/start/vim-markdown
 	url = https://github.com/tpope/vim-markdown
@@ -85,3 +70,21 @@
 [submodule "vim/pack/packages/start/python-mode"]
 	path = vim/pack/packages/start/python-mode
 	url = https://github.com/python-mode/python-mode
+[submodule "vim/pack/packages/start/delimitate"]
+	path = vim/pack/packages/start/delimitate
+	url = https://github.com/raimondi/delimitmate
+[submodule "vim/pack/packages/start/youcompleteme"]
+	path = vim/pack/packages/start/youcompleteme
+	url = https://github.com/valloric/youcompleteme
+[submodule "vim/pack/packages/start/ale"]
+	path = vim/pack/packages/start/ale
+	url = https://github.com/w0rp/ale
+[submodule "vim/pack/packages/start/vim-polyglot"]
+	path = vim/pack/packages/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/pack/packages/start/vim-tidal"]
+	path = vim/pack/packages/start/vim-tidal
+	url = https://github.com/munshkr/vim-tidal
+[submodule "vim/pack/packages/start/scvim"]
+	path = vim/pack/packages/start/scvim
+	url = https://github.com/sbl/scvim
