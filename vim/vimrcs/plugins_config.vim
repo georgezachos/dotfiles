@@ -172,4 +172,4 @@ augroup END
 " => autoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>a :Autoformat<CR>
-au BufWrite * :Autoformat
+" au BufWrite * :Autoformat
