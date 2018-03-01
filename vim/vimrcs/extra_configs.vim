@@ -19,3 +19,5 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
+let g:polyglot_disabled=['latex']
+let g:vimtex_view_method = 'skim'

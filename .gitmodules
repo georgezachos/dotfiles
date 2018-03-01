@@ -88,3 +88,9 @@
 [submodule "vim/pack/packages/start/vim-tmux-navigator"]
 	path = vim/pack/packages/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule "vim/pack/packages/start/vimtex"]
+	path = vim/pack/packages/start/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "vim/pack/packages/start/vim-gutentags"]
+	path = vim/pack/packages/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
