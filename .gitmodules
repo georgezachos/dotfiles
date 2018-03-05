@@ -64,9 +64,6 @@
 [submodule "vim/pack/packages/start/vim-pandoc"]
 	path = vim/pack/packages/start/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc
-[submodule "vim/pack/packages/start/python-mode"]
-	path = vim/pack/packages/start/python-mode
-	url = https://github.com/python-mode/python-mode
 [submodule "vim/pack/packages/start/delimitate"]
 	path = vim/pack/packages/start/delimitate
 	url = https://github.com/raimondi/delimitmate
@@ -94,3 +91,12 @@
 [submodule "vim/pack/packages/start/vim-gutentags"]
 	path = vim/pack/packages/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "simpylfold"]
+	path = simpylfold
+	url = https://github.com/tmhedberg/simpylfold
+[submodule "vim/pack/packages/start/simpylfold"]
+	path = vim/pack/packages/start/simpylfold
+	url = https://github.com/tmhedberg/simpylfold
+[submodule "vim/pack/packages/start/fastfold"]
+	path = vim/pack/packages/start/fastfold
+	url = https://github.com/konfekt/fastfold
