@@ -1,5 +1,4 @@
 " let maplocalleader = "\"
-let g:pymode_python = 'python3'
 
 " Change cursor shape between insert and normal mode in iTerm2.app
 if $TERM_PROGRAM =~ "iTerm"
