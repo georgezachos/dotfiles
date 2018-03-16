@@ -64,9 +64,6 @@
 [submodule "vim/pack/packages/start/vim-pandoc"]
 	path = vim/pack/packages/start/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc
-[submodule "vim/pack/packages/start/delimitate"]
-	path = vim/pack/packages/start/delimitate
-	url = https://github.com/raimondi/delimitmate
 [submodule "vim/pack/packages/start/youcompleteme"]
 	path = vim/pack/packages/start/youcompleteme
 	url = https://github.com/valloric/youcompleteme
@@ -100,3 +97,18 @@
 [submodule "vim/pack/packages/start/fastfold"]
 	path = vim/pack/packages/start/fastfold
 	url = https://github.com/konfekt/fastfold
+[submodule "vim/pack/packages/start/indentline"]
+	path = vim/pack/packages/start/indentline
+	url = https://github.com/yggdroot/indentline
+[submodule "vim/pack/packages/start/splitjoin"]
+	path = vim/pack/packages/start/splitjoin
+	url = https://github.com/andrewradev/splitjoin.vim
+[submodule "vim/pack/packages/start/vim-snippets"]
+	path = vim/pack/packages/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule "vim/pack/packages/start/grep"]
+	path = vim/pack/packages/start/grep
+	url = https://github.com/vim-scripts/grep.vim
+[submodule "vim/pack/packages/start/ultisnips"]
+	path = vim/pack/packages/start/ultisnips
+	url = https://github.com/sirver/ultisnips
