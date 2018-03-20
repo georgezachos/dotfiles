@@ -20,3 +20,9 @@ endif
 
 let g:polyglot_disabled=['latex']
 let g:vimtex_view_method = 'skim'
+
+map ,* *<C-O>:%s///gn<CR>
+
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+

@@ -64,9 +64,6 @@
 [submodule "vim/pack/packages/start/vim-pandoc"]
 	path = vim/pack/packages/start/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc
-[submodule "vim/pack/packages/start/youcompleteme"]
-	path = vim/pack/packages/start/youcompleteme
-	url = https://github.com/valloric/youcompleteme
 [submodule "vim/pack/packages/start/ale"]
 	path = vim/pack/packages/start/ale
 	url = https://github.com/w0rp/ale
@@ -112,3 +109,6 @@
 [submodule "vim/pack/packages/start/ultisnips"]
 	path = vim/pack/packages/start/ultisnips
 	url = https://github.com/sirver/ultisnips
+[submodule "vim/pack/packages/start/youcompleteme"]
+	path = vim/pack/packages/start/youcompleteme
+	url = https://github.com/valloric/youcompleteme
