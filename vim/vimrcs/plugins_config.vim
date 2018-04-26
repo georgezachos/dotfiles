@@ -1,10 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important:
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
@@ -28,7 +21,7 @@ map <leader>f :MRU<CR>
 let g:yankstack_yank_keys = ['y', 'd']
 
 nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-n> <Plug>yankstack_substitute_newer_paste
+nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
 
 """"""""""""""""""""""""""""""
@@ -52,6 +45,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 """"""""""""""""""""""""""""""
 " => Vim grep
@@ -136,35 +130,38 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => scvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:sclangPipeApp     = "~/.vim_runtime/sources_non_forked/scvim/bin/start_pipe"
-let g:sclangDispatcher  = "~/.vim_runtime/sources_non_forked/scvim/bin/sc_dispatcher"
+let g:sclangPipeApp     = "~/.local/share/nvim/plugged/scvim/bin/start_pipe"
+let g:sclangDispatcher  = "~/.local/share/nvim/plugged/scvim/bin/sc_dispatcher"
 let g:scFlash = 1
 let g:sclangTerm = "open -a iTerm.app"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => asyncrun (automatically show quickfix dialog)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-augroup SPACEVIM_ASYNCRUN
-    autocmd!
-    " Automatically open the quickfix window
-    autocmd User AsyncRunStart call asyncrun#quickfix_toggle(15, 1)
-augroup END
-
-
-" augroup QuickfixStatus
-"   au! BufWinEnter quickfix setlocal
-"       \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
-" augroup END
-
-" augroup vimrc
-"     autocmd QuickFixCmdPost * botright copen 8
-" augroup END
-"
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => autoformat
+" => Autoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <leader>a :Autoformat<CR>
 " au BufWrite * :Autoformat
+let g:formatter_yapf_style = 'pep8'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ranger
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => rainbow_parentheses
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

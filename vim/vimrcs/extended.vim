@@ -36,8 +36,8 @@ set background=dark
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim/vimrcs/extra_configs.vim<cr>
-autocmd! bufwritepost ~/.vim/vimrcs/extra_configs.vim source ~/.vim/vimrcs/extra_configs.vim
+map <leader>e :e! ~/.vim/vimrc<cr>
+autocmd! bufwritepost ~/.vim/vimrc source ~/.vim/vimrc
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,13 +64,13 @@ cno $c e <C-\>eCurrentFileDir("e")<cr>
 " it deletes everything until the last slash
 cno $q <C-\>eDeleteTillSlash()<cr>
 
-" Bash like keys for the command line
-cnoremap <C-A>      <Home>
-cnoremap <C-E>      <End>
-cnoremap <C-K>      <C-U>
+" " Bash like keys for the command line
+" cnoremap <C-A>      <Home>
+" cnoremap <C-E>      <End>
+" cnoremap <C-K>      <C-U>
 
-cnoremap <C-P> <Up>
-cnoremap <C-N> <Down>
+" cnoremap <C-P> <Up>
+" cnoremap <C-N> <Down>
 
 " Map ½ to something useful
 map ½ $

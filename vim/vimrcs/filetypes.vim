@@ -20,8 +20,9 @@ au FileType python map <buffer> <leader>D ?def
 au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
+au FileType python set number
 
-" au FileType python nnoremap <buffer> <leader>r :AsyncRun! python3 %<CR>
+"au FileType python nnoremap <buffer> <leader>r :PymodeRun <CR>
 
 
 """"""""""""""""""""""""""""""
@@ -54,12 +55,12 @@ au FileType markdown nnoremap <buffer> <leader>cp :Pandoc pdf <CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => scvim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au Filetype supercollider nnoremap <buffer> <localleader>r :call SClang_block()<CR>
-au Filetype supercollider inoremap <buffer> <localleader>r :call SClang_block()<CR>a
-au Filetype supercollider vnoremap <buffer> <localleader>r :call SClang_send()<CR>
+au Filetype supercollider nnoremap <buffer> <localleader>ss :call SClang_block()<CR>
+au Filetype supercollider inoremap <buffer> <localleader>ss :call SClang_block()<CR>a
+au Filetype supercollider vnoremap <buffer> <localleader>ss :call SClang_send()<CR>
 
-au Filetype supercollider vnoremap <buffer> <localleader>e :call SClang_send()<CR>
-au Filetype supercollider nnoremap <buffer> <localleader>e :call SClang_send()<CR>
-au Filetype supercollider inoremap <buffer> <localleader>e :call SClang_send()<CR>a
+au Filetype supercollider vnoremap <buffer> <localleader>s :call SClang_send()<CR>
+au Filetype supercollider nnoremap <buffer> <localleader>s :call SClang_send()<CR>
+au Filetype supercollider inoremap <buffer> <localleader>s :call SClang_send()<CR>a
 
 au Filetype supercollider nnoremap <buffer> <localleader>. :call SClangHardstop()<CR>
