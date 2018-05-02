@@ -37,14 +37,14 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
 
-""""""""""""""""""""""""""""""
-" => vin-snippets / ultisnips
-""""""""""""""""""""""""""""""
-" ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-" snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"""""""""""""""""""""""""""""""
+"" => vin-snippets / ultisnips
+"""""""""""""""""""""""""""""""
+"" ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
+"" snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+"let g:UltiSnipsExpandTrigger="<c-j>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 """"""""""""""""""""""""""""""
@@ -165,3 +165,10 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NerdCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin on
+

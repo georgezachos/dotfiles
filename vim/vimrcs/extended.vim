@@ -28,10 +28,9 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-" set background=dark
-" let g:gruvbox_italic=1
-colorscheme gruvbox
 set background=dark
+colorscheme gruvbox
+let g:gruvbox_italic=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
@@ -89,12 +88,12 @@ vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
 " Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
+"inoremap $1 ()<esc>i
+"inoremap $2 []<esc>i
+"inoremap $3 {}<esc>i
+"inoremap $4 {<esc>o}<esc>O
+"inoremap $q ''<esc>i
+"inoremap $e ""<esc>i
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -124,8 +123,8 @@ vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 " Open Ack and put the cursor in the right position
 map <leader>g :Ack
 
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+"" When you press <leader>r you can search and replace the selected text
+"vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
