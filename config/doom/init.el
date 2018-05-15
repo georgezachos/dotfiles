@@ -21,9 +21,9 @@
    (setq ivy-posframe-font (font-spec :family "Input Mono Narrow" :size 18)
          doom-font (font-spec :family "Input Mono Narrow" :size 12 :weight 'semi-light))))
 
+
 ;;
 (doom! :feature
-       (popup +all +defaults)
       ;debugger
        eval
        (evil +everywhere)
@@ -43,6 +43,7 @@
       ;ido
 
        :ui
+       (popup +all +defaults)
        doom
        doom-dashboard
        doom-modeline
@@ -52,6 +53,7 @@
        evil-goggles
       ;unicode
       ;tabbar
+       neotree
        vi-tilde-fringe
        window-select
 
@@ -62,14 +64,12 @@
        eshell
       ;gist
        imenu
-      ;impatient-mode
-      ;macos
+       macos
        magit
       ;make
-       neotree
       ;password-store
        pdf
-       ;; ranger
+       ranger
        rotate-text
        term
        tmux
@@ -111,7 +111,6 @@
       ;scala
        sh
       ;swift
-      ;typescript
        web
        faust
        tidal
@@ -129,5 +128,7 @@
       ; +wordnut
       ; +langtool)
 
+       :collab
+       impatient-mode
        :config
        (default +bindings +snippets +evil-commands))

@@ -41,9 +41,8 @@
 ;; Modules
 ;;
 
-;; python-mode
-(after! python-mode
-  (setq python-shell-interpreter "python3"))
+(setq python-shell-interpreter "python3"
+    flycheck-python-pycompile-executable "python3")
 ;; (after! tidal-mode
 ;;   (setq intero-mode nil))
 ;; feature/evil
