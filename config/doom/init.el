@@ -15,11 +15,11 @@
   ((or "proteus" "halimede")
    (setq ivy-height 12
          +doom-modeline-height 24
-         ivy-posframe-font (font-spec :family "Input Mono Narrow" :size 12)
-         doom-font (font-spec :family "Input Mono Narrow" :size 10)))
+         ivy-posframe-font (font-spec :family "Input" :size 12)
+         doom-font (font-spec :family "Input" :size 10)))
   (_
-   (setq ivy-posframe-font (font-spec :family "Input Mono Narrow" :size 18)
-         doom-font (font-spec :family "Input Mono Narrow" :size 12 :weight 'semi-light))))
+   (setq ivy-posframe-font (font-spec :family "Input" :size 18)
+         doom-font (font-spec :family "Input" :size 12 :weight 'semi-light))))
 
 
 ;;
@@ -28,7 +28,6 @@
        eval
        (evil +everywhere)
        (lookup +devdocs +docsets)
-      ;services
        snippets
        file-templates
        spellcheck
@@ -63,6 +62,7 @@
        electric-indent
        eshell
       ;gist
+      ;services
        imenu
        macos
        magit

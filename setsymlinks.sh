@@ -17,6 +17,10 @@ ln -sfv $PWD/skhd ~/.skhd
 ln -sfv $PWD/config ~/.config
 ln -sfv $PWD/tmux.conf ~/.tmux.conf
 ln -sfv $PWD/vim ~/.vim
+ln -sfv $PWD/zshrc ~/.zshrc
+
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 if [ -d "$HOME/.emacs.d" ]; then
      echo -e "\033[1;31m ~/.emacs.d already exists. delete it and rerun the script \033[0m"

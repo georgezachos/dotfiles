@@ -16,6 +16,22 @@
 
 (add-hook! minibuffer-setup (setq-local show-trailing-whitespace nil))
 
+(org-babel-do-load-languages
+'org-babel-load-languages
+'((emacs-lisp . t)
+   (python . t)
+   (shell . t)
+   (matlab . t)
+   ;; (dot . t)
+   ;; (R . t)
+   ;; (gnuplot . t)
+   ;;(sclang . t)
+   ))
+
+(require 'company)
+(setq company-idle-delay 0.2
+      company-minimum-prefix-length 3)
+
 ;;
 ;; UI
 ;;
@@ -195,3 +211,5 @@
 
         (:map mu4e~update-mail-mode-map
           :n "q" #'mu4e-interrupt-update-mail)))
+
+
