@@ -32,6 +32,27 @@
 (setq company-idle-delay 0.2
       company-minimum-prefix-length 3)
 
+(map-put default-frame-alist 'inhibit-double-buffering t)
+
+;; I've swapped these keys on my keyboard
+(setq user-mail-address "henrik@lissner.net"
+      user-full-name    "Henrik Lissner"
+
+      ;; doom-variable-pitch-font (font-spec :family "Fira Sans")
+      ;; doom-unicode-font (font-spec :family "Input Mono Narrow" :size 12)
+      doom-big-font (font-spec :family "Fira Mono" :size 19))
+
+
+(pcase (system-name)
+  ((or "proteus" "halimede")
+   (setq ivy-height 12
+         +doom-modeline-height 24
+         ivy-posframe-font (font-spec :family "Input" :size 12)
+         doom-font (font-spec :family "Input" :size 10)))
+  (_
+   (setq ivy-posframe-font (font-spec :family "Input" :size 18)
+         doom-font (font-spec :family "Input" :size 12 :weight 'semi-light))))
+
 ;;
 ;; UI
 ;;
