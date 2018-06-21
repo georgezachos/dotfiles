@@ -2,3 +2,4 @@
 
 (setq load-path (cons "~/code/Tidal/" load-path))
 (setq tidal-interpreter "/usr/local/bin/ghci")
+;; (setq tidal-interpreter-arguments '("exec" "ghci" "--" "-XOverloadedStrings"))

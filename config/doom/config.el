@@ -8,13 +8,14 @@
 (setq +doom-modeline-buffer-file-name-style 'relative-from-project
       show-trailing-whitespace t
       ;; org
-      +org-dir (expand-file-name "~/work/org/")
+      +org-dir (expand-file-name "~/code/org/")
       org-ellipsis " ▼ "
       ;; mu4e
       mu4e-maildir        (expand-file-name "mail" xdg-data)
       mu4e-attachment-dir (expand-file-name "attachments" mu4e-maildir))
 
 (add-hook! minibuffer-setup (setq-local show-trailing-whitespace nil))
+; (add-hook 'python-mode-hook 'blacken-mode)
 
 (org-babel-do-load-languages
 'org-babel-load-languages
@@ -22,11 +23,13 @@
    (python . t)
    (shell . t)
    (matlab . t)
+   (haskell . t)
    ;; (dot . t)
    ;; (R . t)
    ;; (gnuplot . t)
    ;;(sclang . t)
    ))
+(setq org-babel-python-command "python3")
 
 (require 'company)
 (setq company-idle-delay 0.2
@@ -34,10 +37,8 @@
 
 (map-put default-frame-alist 'inhibit-double-buffering t)
 
-;; I've swapped these keys on my keyboard
-(setq user-mail-address "henrik@lissner.net"
-      user-full-name    "Henrik Lissner"
-
+(setq user-mail-address "gzorge@gmail.com"
+      user-full-name    "George Zachos"
       ;; doom-variable-pitch-font (font-spec :family "Fira Sans")
       ;; doom-unicode-font (font-spec :family "Input Mono Narrow" :size 12)
       doom-big-font (font-spec :family "Fira Mono" :size 19))
@@ -98,7 +99,7 @@
 ;; tools/magit
 (after! magit-repos
   (setq magit-repository-directories
-        (cl-loop for dir in (directory-files "~/work" t "^[^.]" t)
+        (cl-loop for dir in (directory-files "~/code" t "^[^.]" t)
                  if (file-directory-p dir)
                  nconc (cl-loop for subdir in (directory-files dir t "^[^.]" t)
                                 if (and (file-directory-p subdir)
@@ -134,19 +135,19 @@
       (mu4e-drafts-folder     . "/gmail.com/Drafts")
       (mu4e-trash-folder      . "/gmail.com/Trash")
       (mu4e-refile-folder     . "/gmail.com/All Mail")
-      (smtpmail-smtp-user     . "hlissner")
-      (user-mail-address      . "hlissner@gmail.com")
-      (mu4e-compose-signature . "---\nHenrik")))
+      (smtpmail-smtp-user     . "gzorge")
+      (user-mail-address      . "gzorge@gmail.com")
+      (mu4e-compose-signature . "---\george zachos")))
 
-  (set! :email "lissner.net"
-    '((mu4e-sent-folder       . "/lissner.net/Sent Mail")
-      (mu4e-drafts-folder     . "/lissner.net/Drafts")
-      (mu4e-trash-folder      . "/lissner.net/Trash")
-      (mu4e-refile-folder     . "/lissner.net/All Mail")
-      (smtpmail-smtp-user     . "henrik@lissner.net")
-      (user-mail-address      . "henrik@lissner.net")
-      (mu4e-compose-signature . "---\nHenrik Lissner"))
-    t)
+  ;; (set! :email "lissner.net"
+  ;;   '((mu4e-sent-folder       . "/lissner.net/Sent Mail")
+  ;;     (mu4e-drafts-folder     . "/lissner.net/Drafts")
+  ;;     (mu4e-trash-folder      . "/lissner.net/Trash")
+  ;;     (mu4e-refile-folder     . "/lissner.net/All Mail")
+  ;;     (smtpmail-smtp-user     . "henrik@lissner.net")
+  ;;     (user-mail-address      . "henrik@lissner.net")
+  ;;     (mu4e-compose-signature . "---\nHenrik Lissner"))
+  ;;   t)
 
   ;; an evil-esque keybinding scheme for mu4e
   (setq mu4e-view-mode-map (make-sparse-keymap)
