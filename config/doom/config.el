@@ -49,8 +49,8 @@
 
 (setq ivy-height 12
       +doom-modeline-height 24
-      ivy-posframe-font (font-spec :family "Input Mono Condensed" :size 12)
-      doom-font (font-spec :family "Input Mono Condensed" :size 12 :weight 'Extra-light))
+      ivy-posframe-font (font-spec :family "Input" :size 12)
+      doom-font (font-spec :family "Input" :size 12))
 
 (when IS-MAC
   (setq ns-use-thin-smoothing t)
