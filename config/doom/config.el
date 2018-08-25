@@ -22,6 +22,14 @@
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
 ; (add-hook 'python-mode-hook 'blacken-mode)
+(with-eval-after-load "ox-latex"
+  (add-to-list 'org-latex-classes
+               '("book-edu" "\\documentclass{book-edu}"
+                 ("\\section{%s}" . "\\section*{%s}")
+                 ("\\subsection{%s}" . "\\subsection*{%s}")
+                 ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                 ("\\paragraph{%s}" . "\\paragraph*{%s}")
+                 ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 (org-babel-do-load-languages
 'org-babel-load-languages
@@ -57,7 +65,8 @@
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark))
   ;; maximize first frame
-  (set-frame-parameter nil 'fullscreen 'maximized))
+  (set-frame-parameter nil 'fullscreen 'maximized)
+  )
 
 ;;
 ;; UI

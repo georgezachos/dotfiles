@@ -47,6 +47,7 @@
        window-select     ; visually switch windows
 
        :editor
+       (format +onsave)  ; automated prettiness
        multiple-cursors  ; editing in many places at once
       ;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
@@ -65,7 +66,7 @@
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
       ;gist              ; interacting with github gists
-       macos             ; MacOS-specific commands
+      ;macos             ; MacOS-specific commands
       ;make              ; run make tasks from Emacs
       ;magit             ;
       ;password-store    ; password manager for nerds
@@ -96,7 +97,9 @@
       ;(java +meghanada) ; the poster child for carpal tunnel syndrome
       ;javascript        ; all(hope(abandon(ye(who(enter(here))))))
       ;julia             ; a better, faster MATLAB
-       latex             ; writing papers in Emacs has never been so fun
+       (latex            ; writing papers in Emacs has never been so fun
+        +latexmk
+        +pdf-tools=)
       ;ledger            ; an accounting system in Emacs
       ;lua               ; one-based indices? one-based indices
        markdown          ; writing docs for people to ignore
