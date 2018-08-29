@@ -21,7 +21,7 @@
 (add-hook! minibuffer-setup (setq-local show-trailing-whitespace nil))
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
-; (add-hook 'python-mode-hook 'blacken-mode)
+                                        ; (add-hook 'python-mode-hook 'blacken-mode)
 (with-eval-after-load "ox-latex"
   (add-to-list 'org-latex-classes
                '("book-edu" "\\documentclass{book-edu}"
@@ -32,8 +32,8 @@
                  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 (org-babel-do-load-languages
-'org-babel-load-languages
-'((emacs-lisp . t)
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
    (python . t)
    (shell . t)
    (matlab . t)
