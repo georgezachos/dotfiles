@@ -23,14 +23,19 @@ let g:vimtex_view_method = 'skim'
 
 map ,* *<C-O>:%s///gn<CR>
 
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+:nnoremap <Leader>A :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 :set cursorline
-call neomake#configure#automake('nrwi', 500)
-:set clipboard+=unnamedplus
+" call neomake#configure#automake('nrwi', 500)
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 "let g:ale_fixers = { 'python': ['add_blank_lines_for_python_control_statements', 'autopep8', 'isort']}
-"let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 "inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 "inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"let g:deoplete#enable_refresh_always = 1
+let g:deoplete#enable_refresh_always = 1
 
+let g:languagetool_jar='$HOME/languagetool/languagetool-commandline.jar'

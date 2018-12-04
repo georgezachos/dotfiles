@@ -10,7 +10,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
 if has("mac") || has("macunix")
-    set gfn=IBM\ Plex\ Mono:h14,Hack:h12,Source\ Code\ Pro:h15,Menlo:h15
+    set gfn=Source\ Code\ Pro\ Light:h12,Input:h12,Input:h15,Input:h15
+    " set gfn=IBM\ Plex\ Mono:h14,Hack:h12,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
 elseif has("gui_gtk2")
@@ -28,10 +29,17 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-" set background=dark
 syntax on
-colorscheme onedark
-" let g:gruvbox_italic=1
+" colorscheme nova
+colorscheme seoul256
+" colorscheme onedark
+" let g:nord_italic = 1
+" let g:nord_underline = 1
+" let g:nord_italic_comments = 1
+" let g:nord_uniform_status_lines = 1
+" let g:nord_comment_brightness = 12
+" let g:nord_cursor_line_number_background = 1
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
@@ -125,7 +133,7 @@ vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 map <leader>g :Ack
 
 "" When you press <leader>r you can search and replace the selected text
-"vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
