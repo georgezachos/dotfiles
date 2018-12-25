@@ -10,7 +10,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
 if has("mac") || has("macunix")
-    set gfn=Source\ Code\ Pro\ Light:h12,Input:h12,Input:h15,Input:h15
+    set gfn=Source\ Code\ Pro\ Light:h13,Source\ Code\ Pro\ Light:h12,Input:h12,Input:h15,Input:h15
     " set gfn=IBM\ Plex\ Mono:h14,Hack:h12,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
     set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
@@ -31,16 +31,24 @@ set guioptions-=L
 " Colorscheme
 syntax on
 " colorscheme nova
-colorscheme seoul256
-" colorscheme onedark
-" let g:nord_italic = 1
-" let g:nord_underline = 1
-" let g:nord_italic_comments = 1
-" let g:nord_uniform_status_lines = 1
-" let g:nord_comment_brightness = 12
-" let g:nord_cursor_line_number_background = 1
+" colorscheme seoul256
 set background=dark
+" colorscheme base16-tomorrow-night
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+command! LightlineReload call LightlineReload()
+
+function! LightlineReload()
+  let cname = g:colors_name
+  let g:lightline = {'colorscheme': substitute(g:colors_name,"-","_","g")}
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,12 +105,12 @@ vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
 " Map auto complete of (, ", ', [
-"inoremap $1 ()<esc>i
-"inoremap $2 []<esc>i
-"inoremap $3 {}<esc>i
-"inoremap $4 {<esc>o}<esc>O
-"inoremap $q ''<esc>i
-"inoremap $e ""<esc>i
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
