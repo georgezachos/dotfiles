@@ -43,7 +43,7 @@ au FileType python set number
 autocmd FileType faust nnoremap <buffer> <leader>cf :!faust2svg %:p<CR>
 autocmd FileType faust nnoremap <buffer> <leader>cs :!faust2supercollider %:p<CR>
 autocmd FileType faust nnoremap <buffer> <leader>cq :!faust2jaqt %:p<CR>
-
+autocmd BufRead,BufNewFile *.lib set filetype=faust
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => pandoc

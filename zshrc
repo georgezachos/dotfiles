@@ -4,7 +4,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/george/.oh-my-zsh
-
+KEYTIMEOUT=1
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export PATH=$PATH:$HOME/miniconda3/bin
 # Set name of the theme to load. Optionally, if you set this to "random"

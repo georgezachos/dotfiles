@@ -22,6 +22,7 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+let g:NERDTreeQuitOnOpen = 1
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
@@ -111,6 +112,12 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+let g:airline#extensions#tabline#enabled = 1
+
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ' ' "│┃║⁞⋮
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -157,14 +164,14 @@ let g:sclangDispatcher  = "~/.local/share/nvim/plugged/scvim/bin/sc_dispatcher"
 let g:scFlash = 1
 let g:sclangTerm = "open -a iTerm.app"
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Autoformat
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <leader>a :Autoformat<CR>
-" au BufWrite * :Autoformat
-let g:formatter_yapf_style = 'pep8'
-
+"
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " => Autoformat
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" noremap <leader>a :Autoformat<CR>
+" " au BufWrite * :Autoformat
+" let g:formatter_yapf_style = 'pep8'
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -196,19 +203,34 @@ nmap gy yygcc
 nmap gyy mz:t-1<cr>gCc`zmz
 imap gyy <esc>:t-1<cr>gCcgi
 
+call tcomment#type#Define('processing', '// %s')
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimtex
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufReadPre *.tex let b:vimtex_main = 'main.tex'
 
-call tcomment#type#Define('processing', '// %s')
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 set grepprg=rg\ --vimgrep
 
 
-let g:deoplete#enable_at_startup = 1
-
+" let g:deoplete#enable_at_startup = 1
 " let airline#extensions#tmuxline#snapshot_file = "~/.tmux-statusline-colors.conf"
 " let g:airline#extensions#tmuxline#enabled = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vimtex
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['yapf', 'isort', 'add_blank_lines_for_python_control_statements'],
+\   'cpp': ['clang-format'],
+\}
+" Set this variable to 1 to fix files when you save them.
+" let g:ale_fix_on_save = 1
+
+let g:ale_linters = {'python':['flake8']}
